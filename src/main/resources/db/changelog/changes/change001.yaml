@@ -1,0 +1,27 @@
+databaseChangeLog:
+- changeSet:
+    id: create-table-user
+    author: jsf2184
+    changes:
+    - createTable:
+        tableName: user
+        columns:
+        - column:
+            autoIncrement: true
+            constraints:
+              primaryKey: true
+              primaryKeyName: user_pkey
+            name: id
+            type: BIGINT
+        - column:
+            name: username
+            type: VARCHAR(250)
+        - column:
+            name: password
+            type: VARCHAR(250)
+        - column:
+            name: roles
+            type: VARCHAR(250)
+        - column:
+            name: active
+            type: BOOLEAN
